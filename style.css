@@ -16,27 +16,28 @@ body {
 
 /* Header */
 header {
-    padding: 3rem 1rem; /* Increase padding to give space at the top */
+    padding: 3rem 1rem;
     background-color: #fefefe;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
     display: flex;
-    justify-content: center; /* Center the content horizontally */
+    justify-content: center;
     align-items: center;
-    gap: 2rem; /* Space between contact info and profile picture */
+    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap; /* Allow wrapping for small screens */
 }
 
 .contact-info {
-    text-align: center; /* Center align contact info */
+    text-align: center;
     max-width: 50%;
 }
 
 .contact-info h1 {
-    font-size: 2.5rem; /* Make name smaller */
+    font-size: 2.5rem;
     font-weight: bold;
     text-transform: uppercase;
     color: #333;
@@ -51,14 +52,14 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #8B0000; /* Dark red links */
+    color: #8B0000;
     font-size: 1.1rem;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #600000; /* Darker red on hover */
+    color: #600000;
 }
 
 .contact-info-section {
@@ -79,15 +80,15 @@ header {
 
 .profile-pic-container {
     display: flex;
-    justify-content: center; /* Center the image */
+    justify-content: center;
     align-items: center;
     max-width: 50%;
 }
 
 .profile-pic {
-    width: 300px;  /* Make profile picture larger */
+    width: 300px;
     height: auto;
-    border: 2px solid #8B0000;  /* Dark red border */
+    border: 2px solid #8B0000;
     border-radius: 5px;
 }
 
@@ -128,7 +129,7 @@ li {
 
 /* Links */
 a {
-    color: #8B0000; /* Dark red links */
+    color: #8B0000;
     text-decoration: none;
 }
 
@@ -145,4 +146,31 @@ footer {
     color: #777;
     margin-top: 2rem;
     font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Stack the content vertically */
+        text-align: center; /* Center-align everything */
+    }
+
+    .contact-info {
+        max-width: 100%; /* Take full width on small screens */
+        margin-bottom: 1rem;
+    }
+
+    .profile-pic-container {
+        max-width: 100%; /* Take full width on small screens */
+    }
+
+    .profile-pic {
+        width: 80%; /* Make the picture smaller and responsive */
+        margin: 0 auto; /* Center the picture horizontally */
+    }
+
+    .nav-links {
+        justify-content: center; /* Center navigation links */
+        gap: 1rem;
+    }
 }
